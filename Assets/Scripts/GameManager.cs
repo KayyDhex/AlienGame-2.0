@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject[] enemies;
-    int enemyCount;
+    public int enemyCount;
     private void Awake(){
         int managers = GameObject.FindObjectsOfType<GameManager>().Length;
         if( managers > 1) 

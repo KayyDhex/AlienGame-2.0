@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject SuperShot;
     [SerializeField] float nextFire;
+    [SerializeField] GameObject manager;
 
     //limites de la pantalla para pasar del viewport a unit 
     private float minX, maxX, minY, maxY, w, h, canFire;
@@ -50,7 +51,7 @@ public class Player : MonoBehaviour
                typeOfShot = !typeOfShot;
         }
 
-        if(typeOfShot){
+        if(!typeOfShot){
             if(Input.GetKeyDown(KeyCode.Space) && Time.time>=canFire){
             Instantiate(bullet, transform.position - new Vector3(0,h/2,0), transform.rotation);
             canFire = Time.time + nextFire;

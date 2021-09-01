@@ -7,5 +7,5 @@ PhysicsMaterial2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rebote
-  friction: 0.12
-  bounciness: 1
+  friction: 0.84
+  bounciness: 0.91

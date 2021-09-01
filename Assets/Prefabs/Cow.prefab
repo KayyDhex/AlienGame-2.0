@@ -136,4 +136,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.52
   dir: 0
-  lifes: 5
+  lives: 6
+  Live: {fileID: 7410321440308344276, guid: 4b5c67bb7da8dab47a8ca4c9ecc33bc2, type: 3}
