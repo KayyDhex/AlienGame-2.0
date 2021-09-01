@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] bool dir;
+    [SerializeField] int lifes;
+
     private float max, min;
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,16 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag("Shot")){
-            Destroy(this.gameObject);
+            lifes--;
+            if(lifes<=0){
+                Destroy(this.gameObject);   
+            }
+        }
+        if(collision.gameObject.CompareTag("SuperShot")){
+            lifes-=2;
+            if(lifes<=0){
+                Destroy(this.gameObject);   
+            }
         }
     }
 }
